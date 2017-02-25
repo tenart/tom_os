@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Comp 50H Assignment 2</title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css">
+        <link href="css/index.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700" rel="stylesheet">
+    </head>
+    <body>
+        
+        <p class="web_info">Version 20.20</p>
+        <p class="web_info">Thomas OS</p>
+        
+        <div id="dock">
+            <div class="icon" id="about_me_icon" app="about_me">
+                <p>[ about me ]</p>
+            </div>
+            <div class="icon" id="my_classes_icon" app="my_classes">
+                <p>[ my classes ]</p>
+            </div>
+            <div class="icon" id="caesar_cipher_icon" app="caesar_cipher">
+                <p>[ caesar cipher ]</p>
+            </div>
+            <div class="icon" id="clock_icon" app="clock">
+                <p>[ clock ]</p>
+            </div>
+            <div class="icon" id="animation_icon" app="animation">
+                <p>[ animation ]</p>
+            </div>
+        </div>
+        
+        <div class="window front" id="about_me">
+            <div class="title_bar">
+                <button class="close"><i class="fa fa-times"></i></button>
+                <button class="min"><i class="fa fa-minus"></i></button>
+                <button class="max"><i class="fa fa-window-maximize"></i></button>
+                <h1>[ about me ]</h1>
+            </div>
+            <br>
+            <hr>
+            <img id="my_pic" src="img/IMG_5336.png">
+            <hr>
+            <br>
+            <br>
+            <p class="left">
+                Hello world, my name is Tom Nguyen, and I am a freshman at UNC. I'm a computer science major and this is a simple website created for my COMP 50H class.
+                <br>
+                <br>
+                I made it in the style of an old operating system, so all the windows are draggable!
+            </p>
+        </div>
+        
+        <div class="window dark" id="clock">
+            <div class="title_bar">
+                <button class="close"><i class="fa fa-times"></i></button>
+                <button class="min"><i class="fa fa-minus"></i></button>
+                <button class="max"><i class="fa fa-window-maximize"></i></button>
+                <h1>[ clock ]</h1>
+            </div>
+            <table>
+                <tr>
+                    <td id="time" rowspan="2">00:00 -</td><td id="day">-</td>
+                </tr>
+                <tr>
+                    <td id="date">
+                        -
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="window" id="my_classes">
+            <div class="title_bar">
+                <button class="close"><i class="fa fa-times"></i></button>
+                <button class="min"><i class="fa fa-minus"></i></button>
+                <button class="max"><i class="fa fa-window-maximize"></i></button>
+                <h1>[ my classes ]</h1>
+            </div>
+            <p class="left">
+                This is my weekly schedule. Click on a time block to be taken to the class page if one exists.
+            </p>
+            <table>
+                <tr>
+                    <td>M/W</td><td>T/R</td><td>F</td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>
+                            <div class="class">POLI 130</div>
+                            <a href="http://exss.unc.edu/lfitphya/lfit/course-listings/" target="_blank"><div class="class">LFIT 109</div></a>
+                            <a href="http://cs.unc.edu/~lin/COMP50H/" target="_blank"><div class="class">COMP 50H</div></a>
+                        </span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span>
+                            <div class="class">POLI 130 [ REC ]</div>
+                            <a href="http://cs.unc.edu/Courses/comp585-s17/index.html" target="_blank"><div class="class">COMP 185H</div></a>
+                        </span>
+                    </td>
+                    <td>
+                        <span class="space"></span>
+                        <span>
+                            <a href="http://www.cs.unc.edu/~kmp/comp401sp17/syllabus.pdf" target="_blank"><div class="class">COMP 401</div></a>
+                        </span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                    </td>
+                    <td>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span class="space"></span>
+                        <span>
+                            <a href="http://www.cs.unc.edu/~kmp/comp401sp17/syllabus.pdf" target="_blank"><div class="class">COMP 401 [ REC ]</div></a>
+                        </span>
+                    </td>
+                </tr>
+
+                
+            </table>
+            <hr>
+        </div>
+        
+        <div class="window dark" id="caesar_cipher">
+            <div class="title_bar">
+                <button class="close"><i class="fa fa-times"></i></button>
+                <button class="min"><i class="fa fa-minus"></i></button>
+                <button class="max"><i class="fa fa-window-maximize"></i></button>
+                <h1>[ caesar cipher ]</h1>
+            </div>
+            <p class="left">
+                This is a caesar cipher I made for my first assignment. The original cipher was written in Python, but I have remade it in Javascript to run on this website.
+            </p>
+            <hr>
+            <p class="left label">Input text:</p>
+            <input type="text" id="input">
+            
+            <p class="left label">Shifting position:</p>
+            <input type="number" id="key">
+            <button id="encrypt">Run</button>
+            <p class="left">Output:</p>
+            <input type="text" id="output">
+            <p></p>
+        </div>
+    </body>
+    <script src="https://use.fontawesome.com/11a86b8bd9.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/cipher.js"></script>
+</html>
